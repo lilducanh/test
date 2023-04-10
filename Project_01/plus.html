@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>phép cộng</title>
+    <link rel="stylesheet" href="./assets/css/plusCss.css">
+    <script src="https://kit.fontawesome.com/a1443af35e.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    
+<body>
+    <div class="full-box">
+        <div class="plus-box" id="idToAdd">
+            <p class="title">PLUS</p>
+            <div class="input-number" id="input-number">
+                <div class="num1-input">
+                    <label for="num1" >Number 1</label>
+                    <input type="text" id="num1">
+                </div>
+                <div>
+                    <p class="alert-error1" id="alert-error1">&emsp;</p>
+                </div>
+                <div class="num2-input">
+                    <label for="num2" >Number 2</label>
+                    <input type="text" id="num2">
+                </div>
+                <div>
+                    <p class="alert-error2" id="alert-error2" >&emsp;</p>
+                </div>
+            </div>
+            <div style="display: none" id="table-board-box">
+                <table id="table-board">
+                    <tr>
+                        <td>
+                            <button onclick="deleteEle()" style="cursor: pointer;">AC</button>
+                        </td>
+                        <td>
+                            <input class="button-input" type="button" id="pos-neg" value="+/-" onclick="opposite()">
+                        </td>
+                        <td>
+                            <input class="button-input" type="button" id="div" value="/" onclick="clickInput('/')">
+                        </td>
+                        <td>
+                            <button style="cursor: pointer;" onclick="deleteOneElement()"><i class="fa-sharp fa-solid fa-delete-left"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input class="button-input" type="button" id="seven" value="7" onclick="clickInput('7')">
+                        </td>
+                        <td>
+                            <input class="button-input" type="button" id="eight" value="8" onclick="clickInput('8')">
+                        </td>
+                        <td>
+                            <input class="button-input" type="button" id="nine" value="9" onclick="clickInput('9')">
+                        </td>
+                        <td>
+                            <input class="button-input" type="button" id="mul" value="x" onclick="clickInput('*')">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input class="button-input" type="button" id="four" value="4" onclick="clickInput('4')">
+                        </td>
+                        <td>
+                            <input class="button-input" type="button" id="five" value="5" onclick="clickInput('5')">
+                        </td>
+                        <td>
+                            <input class="button-input" type="button" id="six" value="6" onclick="clickInput('6')">
+                        </td>
+                        <td>
+                            <input class="button-input" type="button" id="minus" value="-" onclick="clickInput('-')">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input class="button-input" type="button" id="one" value="1" onclick="clickInput('1')">
+                        </td>
+                        <td>
+                            <input class="button-input" type="button" id="two" value="2" onclick="clickInput('2')">
+                        </td>
+                        <td>
+                            <input class="button-input" type="button" id="three" value="3" onclick="clickInput('3')">
+                        </td>
+                        <td>
+                            <input class="button-input" type="button" id="plus" value="+" onclick="clickInput('+')">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button onclick="clickreturn()"><i class="fa-sharp fa-solid fa-rotate-left" style="cursor: pointer;"></i></button>
+                        </td>
+                        <td>
+                            <input class="button-input" type="button" id="zero" value="0" onclick="clickInput('0')">
+                        </td>
+                        <td>
+                            <input class="button-input" type="button" id="dot" value="." onclick="clickInput('.')" onclick="clickInput('.')">
+                        </td>
+                        <td>
+                            <button onclick="clickResult()" style="background-color: rgb(215, 140, 98); cursor: pointer; " id="result-board">=</button>
+                        </td>
+                        
+                    </tr>
+                </table>
+            </div>
+            <div class="keyboard-box">
+                <button class="keyboard" onclick="show_keyboard()">
+                    <i class="fa-regular fa-keyboard"></i>
+                </button>
+                
+            </div>
+            <div class="button-box">
+                <button class="return-btn" id="return-click" onclick="clickreturn()">
+                     <i class="fa-solid fa-rotate-left"></i>
+                     
+                </button>
+                <button class="result-btn" id="result-click" onclick="clickResult()">Result</button>
+                <button class="delete-btn" id="delete-click" onclick="deleteEle()">
+                    <i class="fa-sharp fa-solid fa-delete-left"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/plusJs.js"></script>
+    <script>
+        document.getElementById('num1').addEventListener('click',function() {input1 = true; input2 = false;});
+        document.getElementById('num2').addEventListener('click',function() {input1 = false; input2 = true;});
+    </script>
+</body>
+</html>

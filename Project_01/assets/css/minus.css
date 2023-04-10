@@ -1,0 +1,163 @@
+body {
+  margin: 0;
+  background-color: rgb(84, 105, 92);
+  font-family: Inter;
+}
+.all {
+  width: 70vw;
+  min-height: 50vh;
+  margin: auto;
+}
+.minus {
+  margin: 0px auto;
+  border: 1px solid;
+  padding: 35px 40px;
+  width: 18em;
+  /* height: 15.75em; */
+  text-align: center;
+  margin-top: 15%;
+  background: linear-gradient(
+    180deg,
+    rgb(65, 62, 62) 50%,
+    rgb(174, 198, 144) 50%
+  );
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.5);
+  /* transition: padding-bottom 0.5s ease-out; */
+}
+.heading {
+  margin-top: 0px;
+  margin-bottom: 20px;
+  font-family: Inter;
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
+}
+.inputNumber {
+  margin-top: 21px;
+  margin-bottom: auto;
+  border: 1px solid;
+  padding: 20px 5px 10px 5px;
+  background-color: rgb(209, 215, 195);
+  font-family: Inter;
+  font-size: 17px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 01);
+}
+.inputNumber {
+  position: relative;
+  z-index: 2;
+}
+#num1,
+#num2 {
+  margin-left: 11px;
+  margin-top: 4px;
+  height: 25px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 11px;
+  font-weight: bold;
+  font-family: Inter;
+}
+
+.back-btn,
+.delete-btn {
+  width: 70px;
+  height: 35px;
+  font-size: 20px;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.5);
+}
+.result-btn {
+  width: 115px;
+  height: 35px;
+  margin-left: 5px;
+  margin-right: 5px;
+  font-size: 20px;
+  font-family: Inter;
+  font-weight: bold;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+#alert-error1 {
+  margin-top: 3px;
+  margin-bottom: 10px;
+  margin-left: 50px;
+  color: rgb(255, 82, 99);
+  font-weight: bold;
+  font-size: 10px;
+}
+#alert-error2 {
+  margin-top: 3px;
+  margin-bottom: 10px;
+  margin-left: 50px;
+  color: rgb(255, 82, 99);
+  font-weight: bold;
+  font-size: 10px;
+}
+.keyboard-down {
+  width: 50px;
+  background-color: rgb(217, 217, 217);
+  border: none;
+  border-radius: 0px 0px 3px 3px;
+  margin-bottom: 10px;
+  /* box-shadow: 0px 3px 4px rgba(0, 0, 0, 1); */
+}
+
+.button-input,
+button {
+  width: 60px;
+  height: 30px;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.all .keyboard-table {
+  width: 288px;
+  height: auto;
+  margin: 0px auto;
+  background-color: rgb(119, 131, 92);
+  padding: 10px 10px;
+  border-radius: 0px 0px 15px 15px;
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 1);
+  margin-top: -10px;
+  padding-top: 15px;
+}
+.keyboard-table {
+  position: relative;
+  z-index: 1;
+}
+
+button:active {
+  background-color: rgb(122, 121, 121);
+  transition: background-color 0.2s;
+}
+#result-board:hover {
+  opacity: 0.5;
+  transition: opacity 0.3s;
+}
+input[type="button"]:hover {
+  background-color: rgb(182, 180, 180);
+  transition: background-color 0.5s;
+}
+
+input[type="button"]:active {
+  background-color: rgb(119, 117, 117);
+  transition: background-color 0.5s;
+}
+.button.isHiden {
+  display: none;
+}
+button:hover {
+  background-color: rgb(182, 180, 180);
+  transition: background-color 0.5s;
+}

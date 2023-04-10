@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    background-color: rgb(84,105,92);
+    font-family: Inter;
+}
+.box-all {
+    width: 50vw;
+    min-height: 50vh;
+    margin: 0 auto;
+}
+.result-box {
+    margin: 0px auto;
+    border: 1px solid;border: none;
+    border-radius: 15px;
+    padding: 20px 40px 50px 40px;
+    width: 18em;
+    height: 12em;
+    text-align: center;
+    margin-top: 15%;
+    background: linear-gradient(180deg, rgb(65,62,62) 50%, rgb(174,198,144) 50%);
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.5);
+}
+.heading {
+    margin-top: 0px;
+    margin-bottom: 20px;
+    font-family: Inter;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+}
+.result {
+    margin-top: 10px;
+    border: 1px solid;
+    padding: 35px 5px;
+    background-color: rgb(209,215,195);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.5);
+}
+
+.result-display {
+    margin-bottom: 20px;
+}
+
+#result-last {
+    font-size: 14px;
+    font-weight: bold;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.copy-btn,.exit-btn {
+    width: 80px;
+    height: 35px;
+    font-size: 20px;
+    border: none;
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+.continues-btn {
+    width: 100px;
+    height: 35px;
+    font-size: 20px;
+    border: none;
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+button:hover {
+    background-color: rgb(182, 180, 180);
+    transition: background-color 0.5s;
+}
+
+button:active {
+    background-color: rgb(119, 117, 117);
+    transition: background-color 0.2s;
+}

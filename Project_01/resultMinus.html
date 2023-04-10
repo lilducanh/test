@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <link rel="stylesheet" href="assets\css\Minus-Result.css">
+    <link rel="stylesheet" href="assets\fonts\stylesheet.css">
+</head>
+<body>
+    <div class = "all">
+        <div class = "result-box">
+            <p class="heading">R E S U L T </p>
+            <div class = "result">
+                <div clas = "result-display">
+                    <input type="text" id="result-last" readonly style="margin: 0 0 20px ;">
+                </div>
+                <div>
+                    <button class="copy-btn" onclick="copyResult()" id = "copy" >Copy</button>
+                    <button class="countinue-btn" onclick="countinueResult()">Continue</button>
+                    <button class="exit-btn" onclick="exitResult()">Exit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src ="assets/js/minus.js"></script>
+    <script>
+        document.getElementById("result-last").value = localStorage.getItem("Input");
+    </script>
+</body>
+</html>

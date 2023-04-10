@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Phép chia</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="./assets/css/style-divi.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+<body>
+    <div class="box-all">
+        <div class="divi-box" id="idToAdd">
+            <p class="heading">Division</p>
+            <div class="input-number">
+                <div class="num1-input">
+                    <label for="num1">Number 1</label>
+                    <input type="text" id="num1">
+                </div>
+                <div>
+                    <p id="alert-error1">&emsp;</p>
+                </div>
+                <div class="num2-input">
+                    <label for="num2">Number 2</label>
+                    <input type="text" id="num2">
+                </div>
+                <div>
+                    <p id="alert-error2">&emsp;</p>
+                </div>
+            </div>
+            <div style="display: none" id="table-board-box">
+                <table id="table-board">
+                    <tr>
+                        <td>
+                            <button onclick="deleteAll()" style="cursor: pointer;">AC</button>
+                        </td>
+                        <td>
+                            <input class="button-input" type="button" id="pos-neg" value="+/-" onclick="opposite()">
+                        </td>
+                        <td>
+                            <input class="button-input" type="button" id="div" value="/" onclick="clickInput('/')">
+                        </td>
+                        <td>
+                            <button style="cursor: pointer;" onclick="deleteOneElement()"><i class="fa-sharp fa-solid fa-delete-left"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input class="button-input" type="button" id="seven" value="7" onclick="clickInput('7')">
+                        </td>
+                        <td>
+                            <input class="button-input" type="button" id="eight" value="8" onclick="clickInput('8')">
+                        </td>
+                        <td>
+                            <input class="button-input" type="button" id="nine" value="9" onclick="clickInput('9')">
+                        </td>
+                        <td>
+                            <input class="button-input" type="button" id="mul" value="x" onclick="clickInput('*')">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input class="button-input" type="button" id="four" value="4" onclick="clickInput('4')">
+                        </td>
+                        <td>
+                            <input class="button-input" type="button" id="five" value="5" onclick="clickInput('5')">
+                        </td>
+                        <td>
+                            <input class="button-input" type="button" id="six" value="6" onclick="clickInput('6')">
+                        </td>
+                        <td>
+                            <input class="button-input" type="button" id="minus" value="-" onclick="clickInput('-')">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input class="button-input" type="button" id="one" value="1" onclick="clickInput('1')">
+                        </td>
+                        <td>
+                            <input class="button-input" type="button" id="two" value="2" onclick="clickInput('2')">
+                        </td>
+                        <td>
+                            <input class="button-input" type="button" id="three" value="3" onclick="clickInput('3')">
+                        </td>
+                        <td>
+                            <input class="button-input" type="button" id="plus" value="+" onclick="clickInput('+')">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button onclick="exitResult()"><i class="fa-sharp fa-solid fa-rotate-left" style="cursor: pointer;"></i></button>
+                        </td>
+                        <td>
+                            <input class="button-input" type="button" id="zero" value="0" onclick="clickInput('0')">
+                        </td>
+                        <td>
+                            <input class="button-input" type="button" id="dot" value="." onclick="clickInput('.')" onclick="clickInput('.')">
+                        </td>
+                        <td>
+                            <button onclick="clickResult()" style="background-color: rgb(215, 140, 98); cursor: pointer;" id="result-board">=</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="keyboard-box" style="text-align: right; margin-bottom: 5px; margin-right: 20px;">
+                <button class="keyboard-down" onclick="dropKeyBoard()">
+                    <i class="fa-sharp fa-solid fa-keyboard"></i>
+                </button>
+            </div>
+            <div class="button-box">
+                <button class="back-btn" id="back-click" onclick="backToMenu()">
+                    <i class="fa-sharp fa-solid fa-rotate-left"></i>
+                </button>
+                <button class="result-btn" id="result-click" onclick="clickResult()">Result</button>
+                <button class="delete-btn" id="delete-click" onclick="deleteAll()">
+                    <i class="fa-sharp fa-solid fa-delete-left"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/js-divi.js"></script>
+    <script>
+        document.getElementById('num1').addEventListener('click',function() {input1 = true; input2 = false;});
+        document.getElementById('num2').addEventListener('click',function() {input1 = false; input2 = true;});
+    </script>
+</body>
+</html>
