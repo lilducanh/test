@@ -1,0 +1,68 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="QLBH.master.cs" Inherits="KTTM1.QLBH" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+        .container{
+            display:flex ;
+        }
+        .left{
+            width:30% ;
+            float:left ;
+        }
+        .right{
+            width:30% ;
+            float:right;
+        }
+        .auto-style1 {
+            width: 174px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="container">
+            <div class="left">
+                <h2>DANH MUC HANG HOA</h2>
+                <asp:DataList ID="DataList1" runat="server">
+                    <ItemTemplate>
+                        <asp:LinkButton ID="LinkButton1" runat="server" Text='<%# Eval("TenDM") %>' CommandArgument='<%# Eval("MaDM") %>' OnClick="LinkButton1_Click"></asp:LinkButton>
+                    </ItemTemplate>
+                </asp:DataList>
+            </div>
+            <div class="center">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+            </div>
+            <div class="right">
+                <asp:Login ID="Login1" runat="server"></asp:Login>
+                <br />
+                <table style="width:100%;">
+                    <tr>
+                        <td colspan="2">
+                            <h4 style="text-align:center">ThongKe</h4>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style1">Truy Cap</td>
+                        <td>
+                            <asp:Label ID="lb_TruyCap" runat="server" Text="Label"></asp:Label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style1">OnLine</td>
+                        <td>
+                            <asp:Label ID="lb_online" runat="server" Text="Label"></asp:Label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+    </form>
+</body>
+</html>
